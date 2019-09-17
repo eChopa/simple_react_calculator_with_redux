@@ -12,7 +12,6 @@ const mapDispatchToProps = (dispatch) => {
 const RowLayout = ({row, idInArray, changeRow,deleteRow}) => {
     return (
         <li className={`row mb-0 justify-content-center alert ${idInArray%2===0? 'alert-primary':null}`}>
-            {row.id?
                 <div className="col-3 col-sm-3 col-md-1 mb-2 mb-md-0 text-center">
                     <select
                         className="form-control"
@@ -22,9 +21,7 @@ const RowLayout = ({row, idInArray, changeRow,deleteRow}) => {
                         <option value="-">-</option>
                     </select>
                 </div>
-                : null
-            }
-            <div className={`col-9 col-sm-3 col-md-2 mb-2 mb-md-0 text-center ${!row.id? " offset-md-1":null}`}>
+            <div className="col-9 col-sm-3 col-md-2 mb-2 mb-md-0 text-center">
                 <input className="form-control text-center" value={row.value}
                        onChange={(event)=>{changeRow({id: row.id, type: "value", value: event.target.value})}}
                        type="number"/>
