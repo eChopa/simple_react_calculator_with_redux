@@ -7,8 +7,14 @@ const  mapStateToProps = (state) => {
 }
 
 export  const RowsBoxLayout = ({rows}) => {
-    return rows.map((row, idInArray) => { return <Row key={row.id} row={row} idInArray={idInArray}/>})}
-
+    return (
+        <ul className="list-group">
+            {rows.map((row, idInArray) => {
+                return <Row key={row.id} row={row} idInArray={idInArray}/>
+            })}
+        </ul>
+    )
+}
 
 export const  RowsBox = connect(mapStateToProps)(RowsBoxLayout)
 

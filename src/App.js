@@ -9,8 +9,8 @@ function Calculator() {
   return (
     <div className="container">
         <h1 className="text-center">Simple React calculator(adder) with Redux</h1>
-        <RowsBox/>
         <AddRow/>
+        <RowsBox/>
         <Result/>
     </div>
   );

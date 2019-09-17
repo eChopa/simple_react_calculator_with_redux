@@ -11,7 +11,7 @@ const mapDispatchToProps = (dispatch) => {
 
 const RowLayout = ({row, idInArray, changeRow,deleteRow}) => {
     return (
-        <div className={`row mb-0 justify-content-center alert ${idInArray%2===0? 'alert-primary':null}`}>
+        <li className={`row mb-0 justify-content-center alert ${idInArray%2===0? 'alert-primary':null}`}>
             {row.id?
                 <div className="col-3 col-sm-3 col-md-1 mb-2 mb-md-0 text-center">
                     <select
@@ -42,7 +42,7 @@ const RowLayout = ({row, idInArray, changeRow,deleteRow}) => {
                     Delete
                 </button>
             </div>
-        </div>
+        </li>
     )
 }
 

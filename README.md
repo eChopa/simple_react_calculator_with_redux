@@ -1,6 +1,6 @@
 
 
-# Simple React calculator (adder)
+# Simple React calculator (adder) with Redux
 
 
 ## To run the project:
