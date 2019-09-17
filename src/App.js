@@ -1,26 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { RowsBox } from "./components/RowsBox";
+import { Result } from "./components/Result";
+import { AddRow } from "./components/AddRow";
 
-function App() {
+
+function Calculator() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+        <h1 className="text-center">Simple React calculator(adder) with Redux</h1>
+        <RowsBox/>
+        <AddRow/>
+        <Result/>
     </div>
   );
 }
 
-export default App;
+
+
+export default Calculator;
